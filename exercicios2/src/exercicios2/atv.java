@@ -2,61 +2,22 @@ package exercicios2;
 import java.util.Scanner;
 public class atv {
 	public static void main(String[] args) {
-	       Scanner teclado = new Scanner(System.in);
-	       int a,b, opcao;
+	     Scanner teclado = new Scanner(System.in);
+	       double n;
 	   
 	  
-	       System.out.println("Digite o valor do primeiro número");
-	       a = teclado.nextInt();  
-	       System.out.println("Digite o valor do segundo número");
-	       b = teclado.nextInt(); 
-	      
-	       do {
-	       System.out.println("===MENU===");	
-	       System.out.println("1-Somar");		
-	       System.out.println("2-Subtração");	
-	       System.out.println("3-Multiplicação");	
-	       System.out.println("4-Divisão");	
-	       System.out.println("5-Trocar Valores");	
-	       System.out.println("6-Sair");	
-	       System.out.println("==========");
-	       opcao = teclado.nextInt();
-	       if(opcao == 1) {
-	       	System.out.println(somar(a,b));
-	       } else if(opcao == 2) {
-	       	System.out.println(subtracao(a,b));
-	       	
-	       } else if(opcao == 3) {
-	       	System.out.println(multiplicacao(a,b));
-	       	
-	       }else if(opcao == 4) {
-	       	System.out.println(divisao(a,b));
-	       	
-	       }else if (opcao == 5) {
-	       	  System.out.println("Digite o valor do primeiro número");
-	             a = teclado.nextInt();  
-	             System.out.println("Digite o valor do segundo número");
-	             b = teclado.nextInt(); 
-	       	
-	       }
-	      
-	      
-	       }while(opcao != 6);
-	      
-	      
+	       System.out.println("Digite o valor de n");
+	       n = teclado.nextInt();  
+	       System.out.println(equacao(n));
 	   }
-	   public static int somar(int a, int b) {
-	   return a + b;
-	   	
-	   	
+	   public static double equacao(double n) {
+	   	double s=0;
+	   	int sinal = 1;
+	      for(int i=1;i<=n;i++) {
+	   	 s = s + sinal * (1.0/i);
+	   	 sinal = -sinal;
+	      }
+	      return s;
 	   }
-	   public static int subtracao(int a, int b) {
-	   	return  a - b;
-	   }
-	   public static int multiplicacao(int a, int b) {
-	   	return  a * b;
-	   }
-	   public static double divisao(int a, int b) {
-	   	return (double) a/b;
-	   }
-	}
+	} 
+
