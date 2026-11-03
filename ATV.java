@@ -4,23 +4,20 @@ public class ATV {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String palavra1 = "Exemplo";
-		
-		lua(palavra1);
+		lua("Exemplo");
 		
 		
 		
 	}
 		
-		public static void lua (String palavra1) {
-		System.out.println(palavra1.charAt(0));
-		System.out.println(palavra1.charAt(1));
-		System.out.println(palavra1.charAt(2));
-		System.out.println(palavra1.charAt(3));
-		System.out.println(palavra1.charAt(4));
-		System.out.println(palavra1.charAt(5));
-		System.out.println(palavra1.charAt(6));
+		public static void lua (String p) {
+			for(int i=0; i<p.length();i++) {
+			for (int j=0;j<=i;j++) {
+				System.out.print(p.charAt(j));
+			}
+			System.out.println();
+			}
+		}
 		
-				}
-
 }
+
